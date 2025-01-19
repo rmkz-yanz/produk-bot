@@ -117,12 +117,33 @@
             const productDiv = document.createElement('div');
             productDiv.className = 'product form-group';
             productDiv.innerHTML = `
-                <label>Nama Produk: </label>
-                <input type="text" class="product-name" placeholder="Masukan nama produk">
-                <label>Harga: </label>
-                <input type="text" class="price formatted-input" placeholder="Masukan harga" oninput="formatNumberInput(this)" inputmode="numeric">
-                <label>Jumlah: </label>
-                <input type="number" class="quantity" placeholder="Jumlah produk" min="0" step="1" inputmode="numeric">
+                                <label>Nama Produk: </label>
+                <input
+                    type="text"
+                    class="product-name"
+                    placeholder="Masukan nama produk"
+                />
+                <div class="harga-jumlah">
+                    <div>
+                        <label>Harga</label>
+                        <input
+                            type="text"
+                            class="price formatted-input"
+                            placeholder="Masukan harga"
+                            oninput="formatNumberInput(this)"
+                            inputmode="numeric"
+                        />
+                    </div>
+                    <div>
+                        <label>Jumlah</label>
+                        <input
+                            type="number"
+                            class="quantity"
+                            placeholder="Jumlah produk"
+                            min="0"
+                            step="1"
+                            inputmode="numeric"
+                        />
             `;
             container.appendChild(productDiv);
         });
